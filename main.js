@@ -67,7 +67,7 @@ const findInvalidCards = (ccNumArr) => {
 
         if(validateCred(ccNumArr[i]) === false){
 
-            invalidArray.push(i)}
+            invalidArray.push(ccNumArr[i])}
         }
     
     return invalidArray;
@@ -94,6 +94,7 @@ const idInvalidCardCompanies = (invalidCCArr) => {
         } return invalidCompanyCards
 }
 
-
-console.log(findInvalidCards(batch));
+const invalidCards = findInvalidCards(batch);
+const invalidCardCompanies = idInvalidCardCompanies(invalidCards);
+console.log(invalidCardCompanies);
 
